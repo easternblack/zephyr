@@ -1,0 +1,16 @@
+# USB M2I configuration options
+
+# Copyright (c) 2020 M2I Corporation
+# SPDX-License-Identifier: Closed
+
+config USB_DEVICE_EB
+	bool "USB Eastern Black Device support"
+	help
+	  Enables USB E.B. Device support.
+
+config EB_BULK_EP_MPS
+	int
+	depends on USB_DEVICE_EB
+	default 64
+	help
+	  Loopback Function bulk endpoint size
